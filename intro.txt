@@ -1,0 +1,31 @@
+JAVA - HIGH level language
+COMPILER - BINARY format me CONVERT krta hai
+
+Primitive data types - includes byte, short, int, long, float, double, boolean and char
+Non-primitive data types - such as String, Arrays and Classes
+
+The byte data type can store whole numbers from -128 to 127
+The short data type can store whole numbers from -32768 to 32767
+The int data type can store whole numbers from -2147483648 to 2147483647
+long - very large : Note that you should end the value with an "L" 
+    ->long myNum = 15000000000L;
+
+The float and double data types can store fractional numbers. Note that you should end the value with an "f" for floats and "d" for doubles
+
+Java Type Casting -> 1. Widening Casting  , 2. Narrowing Casting 
+
+OPERATORS : 
+    BITWISE X-OR        : ^
+    BITWISE LEFT SHIFT  : <<
+    BITWISE RIGHT SHIFT : >>
+
+BITWISE AND/OR : &  / | 
+LOGICAL AND/OR : && / ||
+
+STRING : .length() :: STRING[] : .length
+1st is a string , 2nd is a array of strings
+
+method overloading ->  multiple methods can have the same name with different parameters
+
+
+
