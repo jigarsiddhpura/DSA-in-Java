@@ -8,6 +8,8 @@ public class Patterns{
         System.out.println("Enter cols : ");
         int col = sc.nextInt();
 
+        // ✨ UNCOMMENT ANY OF THE BELOW FUNCTION TO PRINT THE PATTERN ✨
+
         // solidRectangle(row,col);
         // hollowReactangle(row,col);
         // halfpyramid(row);

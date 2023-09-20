@@ -4,6 +4,11 @@ COMPILER - BINARY format me CONVERT krta hai
 Primitive data types - includes byte, short, int, long, float, double, boolean and char
 Non-primitive data types - such as String, Arrays and Classes
 
+boolean, byte in 64bit machine - 1 byte
+char in 64bit machine - 2 byte
+int, float - in 64bit machine = 4 byte
+long, double - in 64 bit machine = 8byte
+
 The byte data type can store whole numbers from -128 to 127
 The short data type can store whole numbers from -32768 to 32767
 The int data type can store whole numbers from -2147483648 to 2147483647
@@ -26,6 +31,16 @@ STRING : .length() :: STRING[] : .length
 1st is a string , 2nd is a array of strings
 
 method overloading ->  multiple methods can have the same name with different parameters
+
+new (keyword) -> isko use krtey hai to define space in memory for non-primitive data type ⭐⭐⭐
+
+1 word input : .next() :: 1 line input : .nextLine() 
+
+⭐ Strings are immutable ⭐ -> To its rescue comes the String builder class
+
+BIT MASKING -> PROCESS OF DOING BIT MANIPULATION throught OPERATIONS like - GET, SET, CLEAR, UPDATE
+BIT MASK -> NUMBER used for the above process
+
 
 
 
