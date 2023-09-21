@@ -42,5 +42,15 @@ BIT MASKING -> PROCESS OF DOING BIT MANIPULATION throught OPERATIONS like - GET,
 BIT MASK -> NUMBER used for the above process
 
 
+------------------------------    RECURSION   ----------------------------------
+
+-> when recursive funcs are called again n again -> they get pushed on a STACK
+-> for eg: func(int i) -> for each recursive call -> `i` is created in the memory , which doesn't happen in iteration
+-> if there is not base condition then the problem STACK OVERFLOW will occur due to MEMORY getting filled
+-> When we reach the base case then it gets popped off the stack
+-> The last thing left on top of the stack will be returned by the function call
+
+
+
 
 
