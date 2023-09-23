@@ -10,10 +10,9 @@ public class Recursion{
         // System.out.println(fact_n);
         // fibonacci(0,1,n-2);
         
-        int xPowN = calcPowerlogn(2,5);
+        int xPowN = calcPower(2,5);
         System.out.println(xPowN);
 
-        
     } 
 
     public static void printNum(int n){
@@ -76,10 +75,11 @@ public class Recursion{
         if(x == 0){
             return 0;
         }
+        int xPown = calcPower(x,n/2);
         if(n%2 == 0){
-            return calcPower(x,n/2) * calcPower(x,n/2);
+            return xPown * xPown;
         } else {
-            return calcPower(x,n/2) * calcPower(x,n/2) * x;
+            return xPown * xPown * x;
         }
     }
 }
