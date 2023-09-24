@@ -156,7 +156,7 @@ public class Recursion_PS{
         uniqueSubsequences(str,idx+1,newString,set);
     }
 
-    public static void printKeypadComb(String str,int idx, String combination){
+    public static void printKeypadComb(String str,int idx, String combination){ 
         // T.C = O(4^n) where n = length of string, 4 = max length of a mapping
         if(idx == str.length()){
             System.out.println(combination);
