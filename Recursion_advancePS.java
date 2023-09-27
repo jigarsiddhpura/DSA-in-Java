@@ -1,12 +1,21 @@
 import java.util.*;
 
 public class Recursion_advancePS{
+
+    
     public static void main(String[] args){
-
+        
         // permutations("abc","");
+        
+        // int totalPaths = countPaths(0,0,3,3);
+        // System.out.println(totalPaths);
+        
+        // System.out.println(placeTiles(4,2));
+        
+        // System.out.println(callGuests(4));
 
-        int totalPaths = countPaths(0,0,3,3);
-        System.out.println(totalPaths);
+        ArrayList<Integer> subset = new ArrayList<>();
+        subsetPrint(3,subset);
     }
 
     public static void permutations(String str,String permutation){
@@ -44,9 +53,60 @@ public class Recursion_advancePS{
 
     // no. of ways we can fill the floor of size (n,m) with titles of size (1,m)
     public static int placeTiles(int n , int m ){
-
-    // vertically
+        if(n==m){
+            return 2;
+        }
+        if(n<m){
+            return 1;
+        }
     
-
+        // vertically
+        int verticalPlacement = placeTiles(n-m,m);
+    
+        // horizontally
+        int horizontalPlacement = placeTiles(n-1,m);
+    
+        return verticalPlacement + horizontalPlacement;
     }
+
+    // no. of ways in which u can invite n people to the party - single / pairs (default meaning of pair = pair of 2 only)
+    public static int callGuests(int n){
+        // <= bcz if guests<1 -> no way to call them -> 1 way
+        if(n <= 1){
+            return 1;
+        }
+
+        // single
+        int ways1 = callGuests(n-1);
+
+        // pair
+        int ways2 = (n-1) * callGuests(n-2);
+
+        return ways1 + ways2;
+    }
+
+    // print all subsets of 1st `n` natural no.s
+    public static void subsetPrint(int n, ArrayList<Integer> subset) {
+        if(n==0){
+            printArray(subset);
+            return;
+        }
+
+        // add hoga
+        subset.add(n);
+        subsetPrint(n-1,subset);
+
+        // add nhi hoga
+        subset.remove(subset.size() - 1);
+        subsetPrint(n-1, subset);
+    }
+
+    public static void printArray(ArrayList<Integer> arr){
+        for(int i=0;i<arr.size();i++){
+            System.out.print(" "+arr.get(i));
+        }
+        System.out.println("");
+    }
+
+
 }
