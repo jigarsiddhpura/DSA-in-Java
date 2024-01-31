@@ -9,8 +9,8 @@ public class Recursion_PS{
     
     public static void main(String[] args){
 
-        // int n = 3;
-        // towerOfHanoi(n,"S","H","D");
+        int n = 3;
+        towerOfHanoi(n,"S","H","D");
 
         // String str = "abcd";
         // reverse(str,str.length() - 1);
@@ -33,7 +33,7 @@ public class Recursion_PS{
         // HashSet<String> set = new HashSet<String>();
         // uniqueSubsequences("aaa",0,"",set);
 
-        printKeypadComb("23",0,"");
+        // printKeypadComb("23",0,"");
 
     }
 

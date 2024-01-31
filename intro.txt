@@ -19,6 +19,17 @@ The float and double data types can store fractional numbers. Note that you shou
 
 Java Type Casting -> 1. Widening Casting  , 2. Narrowing Casting 
 
+byte -> short -> int -> float -> long -> double (each j can casted into i>j)
+
+Coversion happens when : 1. type compatible eg: int -> str not possible 2. destination type > source type (in size)
+
+----------------------------------------- TYPE PROMOTION -------------------------------------
+
+1. Java automatically converts BYTE,CHAR,SHORT to INT while eval an EXPRESSION.
+2. If one expression if LONG, FLOAT, DOUBLE then whole exp is converted into LONG,FLOAT,DOUBLE respectively.
+
+---------------------------------------------------------------------------------------------------------
+
 OPERATORS : 
     BITWISE X-OR        : ^
     BITWISE LEFT SHIFT  : <<
@@ -30,7 +41,7 @@ LOGICAL AND/OR : && / ||
 STRING : .length() :: STRING[] : .length
 1st is a string , 2nd is a array of strings
 
-method overloading ->  multiple methods can have the same name with different parameters
+method overloading ->  multiple methods can have the same name with different parameters/ body
 
 new (keyword) -> isko use krtey hai to define space in memory for non-primitive data type ⭐⭐⭐
 
@@ -49,6 +60,9 @@ BIT MASK -> NUMBER used for the above process
 -> if there is not base condition then the problem STACK OVERFLOW will occur due to MEMORY getting filled
 -> When we reach the base case then it gets popped off the stack
 -> The last thing left on top of the stack will be returned by the function call
+
+----------------------------------------------------------------------------------------
+
 
 
 
