@@ -6,12 +6,12 @@ public class Recursion{
         // printNum(5);
         // sumNatural(0,n,0);
 
-        // int fact_n = factorial(n);
-        // System.out.println(fact_n);
+        int fact_n = factorial(n);
+        System.out.println(fact_n);
         // fibonacci(0,1,n-2);
         
-        int xPowN = calcPower(2,5);
-        System.out.println(xPowN);
+        // int xPowN = calcPower(2,5);
+        // System.out.println(xPowN);
 
     } 
 
@@ -81,5 +81,37 @@ public class Recursion{
         } else {
             return xPown * xPown * x;
         }
+    }
+
+    public static boolean isSorted (int[] arr, int i){
+        if (i == arr.length-1) {
+            return true;
+        }
+        if (arr[i] > arr[i+1]) {
+            return false;
+        }
+        return isSorted(arr,i+1);
+    }
+
+    public static int firstOccurence (int[] arr, int i, int key){
+        if (i == arr.length) return -1;
+
+        // compare with self
+        if (arr[i] == key) return i;
+
+        // then look forward
+        return firstOccurence(arr,i+1,key);
+    }
+
+    public static int lastOccurence (int[] arr, int i, int key){
+        if (i == arr.length) return -1;
+
+        // Look forward
+        int isFound = lastOccurence(arr,i+1,key);
+
+        // then compare with self
+        if (isFound == -1 && arr[i] == key) return i;
+
+        return isFound;
     }
 }

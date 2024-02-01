@@ -14,8 +14,40 @@ public class Recursion_advancePS{
         
         // System.out.println(callGuests(4));
 
-        ArrayList<Integer> subset = new ArrayList<>();
-        subsetPrint(3,subset);
+        // ArrayList<Integer> subset = new ArrayList<>();
+        // subsetPrint(3,subset);
+
+        removeDuplicates(0, "appnnacolllegge", new StringBuilder(""), new int[26]);
+
+    }
+
+    // Given n friends, each one can remain single or can be paired up with some other friend. Each friend can be paired only once. Find out the total number of ways in which friends can remain single or can be paired up.
+    // ✅ GOLDMAN SACHS ✅
+
+    public static int friendsPairing (int n){
+        if (n==1 || n==2) {
+            return n;
+        }
+
+        // total ways = single + pair (choices for each pair * 1 pair ways  )
+        return friendsPairing(n-1) + (n-1) * friendsPairing(n-2);
+    
+    }
+
+
+    // remove duplicates from string 
+    // ✅ GOOGLE, MICROSOFT ✅
+    public static void removeDuplicates (int idx,String str, StringBuilder newStr, int[] map){
+        if (idx == str.length()) {
+            System.out.println(newStr);
+            return;
+        }
+        char currChar = str.charAt(idx);
+        if (map[currChar-'a'] == 0) {
+            map[currChar-'a'] = 1;
+            newStr.append(currChar);
+        }
+        removeDuplicates(idx+1,str,newStr,map);
     }
 
     public static void permutations(String str,String permutation){
@@ -50,6 +82,19 @@ public class Recursion_advancePS{
 
         return downPaths + rightPaths;
     }
+    
+    // no. of ways we can fill the floor of size (2,n) with titles of size (2,1)
+    // ✅ AMAZON ✅
+    public static int tilingProblem (int n){
+        if (n==0 || n==1){
+            return 1;
+        }
+
+        int verticalPlacement = tilingProblem(n-1);
+        int horizontalPlacement = tilingProblem(n-2);
+
+        return verticalPlacement + horizontalPlacement;
+    }
 
     // no. of ways we can fill the floor of size (n,m) with titles of size (1,m)
     public static int placeTiles(int n , int m ){
@@ -57,17 +102,19 @@ public class Recursion_advancePS{
             return 2;
         }
         if(n<m){
+            // n = 0 or 1
             return 1;
         }
-    
+        
         // vertically
         int verticalPlacement = placeTiles(n-m,m);
-    
+        
         // horizontally
         int horizontalPlacement = placeTiles(n-1,m);
-    
+        
         return verticalPlacement + horizontalPlacement;
     }
+
 
     // no. of ways in which u can invite n people to the party - single / pairs (default meaning of pair = pair of 2 only)
     public static int callGuests(int n){
@@ -99,7 +146,7 @@ public class Recursion_advancePS{
         // add nhi hoga
         subset.remove(subset.size() - 1);
         subsetPrint(n-1, subset);
-    }
+    }   
 
     public static void printArray(ArrayList<Integer> arr){
         for(int i=0;i<arr.size();i++){
