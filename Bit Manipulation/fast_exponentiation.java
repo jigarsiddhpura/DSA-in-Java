@@ -13,7 +13,7 @@ public class fast_exponentiation {
         return ans;
     }
     public static void main(String args[]) {
-        int count = fastExponentiation(3,5);
+        int count = fastExponentiation(2,10);
         System.out.println(count);
     }
 }
