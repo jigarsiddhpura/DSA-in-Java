@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class max_subarray_sum_prefix_sum{
+public class max__sum_prefix_sum{
     public static int maxSum(int[] arr){
         int max = Integer.MIN_VALUE, currSum = 0;
         int[] prefix = new int[arr.length];
