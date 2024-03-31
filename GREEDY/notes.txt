@@ -1,0 +1,5 @@
+definintion - find local optimum soln in hope to find global optimum
+
+1. optimization problems
+2. max, min waaley
+3. sorted ho kuch
