@@ -25,7 +25,7 @@ Coversion happens when : 1. type compatible eg: int -> str not possible 2. desti
 
 ----------------------------------------- TYPE PROMOTION -------------------------------------
 
-1. Java automatically converts BYTE,CHAR,SHORT to INT while eval an EXPRESSION.
+1. Java automatically converts BYTE,CHAR,SHORT to INT while eval an EXPRESSION like *,/,+,-.
 2. If one expression if LONG, FLOAT, DOUBLE then whole exp is converted into LONG,FLOAT,DOUBLE respectively.
 
 ---------------------------------------------------------------------------------------------------------
